@@ -392,8 +392,11 @@ end
     -- Returns the gib so that you can do whatever you want with it after creation
     -- 'model' - The model to use
     -- 'data' (table)
-        -- 'data.offset' - Vector position offset relative to itself
-        -- 'data.DontBleed' - If true, the gib will not have blood effects
+    -- 'data.offset' - Vector position offset relative to itself
+	-- 'data.IsRagdoll' - If true, the gib will use "prop_ragdoll" class
+    -- 'data.DontBleed' - If true, the gib will not have blood effects
+	-- 'data.DontDissolve' - If true, the gib will not dissolve even if last damage type was DMG_DISSOLVE
+
 function NPC:CreateGib( model, data )
     return self:InternalCreateGib( model, data )
 end
